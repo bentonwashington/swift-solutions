@@ -1,0 +1,26 @@
+func compareTriplets(a: [Int], b: [Int]) -> [Int] {
+    
+    //initialize variables
+    var alice: Int = 0
+    var bob: Int = 0
+    var output: [Int] = []
+    
+    //loop through each of their arrays
+    for i in 0...2 {
+        
+        if a[i] > b[i] {
+            alice += 1
+        } 
+        if b[i] > a[i] {
+            bob += 1
+        } 
+        else {
+            continue
+        }
+    }
+    
+    //update their scores and return output
+        output.append(alice)
+        output.append(bob)
+        return output 
+}

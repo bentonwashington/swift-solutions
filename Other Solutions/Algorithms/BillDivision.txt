@@ -1,0 +1,24 @@
+func bonAppetit(bill: [Int], k: Int, b: Int) -> Void {
+    // Write your code here
+    
+    //initialize variable for total price for all items
+    var total = 0
+    
+    //iterate through each item for new total
+    for each in bill{
+        total += each
+    }
+    
+    //Need to subtract what Anna didn't get for new total and then split
+    var newTotal = total - bill[k]
+    var splitTotal = newTotal / 2
+    
+    //if the split total for Anna is correct, print "Bon Appetit"
+    //else print the change Brian owes her
+    if splitTotal == b {
+        print("Bon Appetit")
+    } else {
+        let change = b - splitTotal
+        print(change)
+    }
+}

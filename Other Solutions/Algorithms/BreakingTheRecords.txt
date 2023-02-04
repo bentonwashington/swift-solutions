@@ -1,0 +1,31 @@
+func breakingRecords(scores: [Int]) -> [Int] {
+    // Write your code here
+    
+    //initialize variables
+    //empty array that we will return, count, highs and lows
+    var record = [Int]()
+    var count = scores.count - 1
+    var high = scores[0]
+    var highCount = 0
+    var low = scores[0]
+    var lowCount = 0
+
+    //iterate through array
+    for i in 0...count {
+        if scores[i] > high {
+            high = scores[i]
+            highCount += 1
+        }
+        
+        if scores[i] < low {
+            low = scores[i]
+            lowCount += 1
+        }
+    }
+    
+    record.append(highCount)
+    record.append(lowCount)
+    
+    return record
+
+}

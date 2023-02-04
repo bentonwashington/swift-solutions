@@ -1,0 +1,16 @@
+func reverseArray(a: [Int]) -> [Int] {
+    // Write your code here
+    
+    //initialize array and set c to equal the array index count
+    var b = [Int]();
+    var c = a.count - 1;
+
+    //start from highest index and append each number into empty array
+    for index in stride(from: c, through: 0, by: -1) {
+        b.append(a[index])
+    }
+    
+    //return empty array
+    return b
+
+}

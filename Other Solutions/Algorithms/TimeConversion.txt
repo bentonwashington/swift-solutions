@@ -1,0 +1,32 @@
+func timeConversion(s: String) -> String {
+    // Write your code here
+    
+    //input: 07:05:45PM
+    //first part is saying to make sure hh is an Int since it's coming from a string. 
+    //Yes, hh is an Int in this case
+    guard let hh = Int(s.prefix(2)) else { return "Error" }
+    
+//second, make this variable time equal the input string without the last two
+//time = 07:05:45
+        var time = String(s.dropLast(2))
+
+//if the original string has a suffix of PM and the hr is less that 12 (1to11pm)
+//then drop the first two which is the hour
+//now the time is the new hour + time
+//in this case, 07 turns to 19
+        if s.hasSuffix("PM"), hh < 12 {
+            time = String(time.dropFirst(2))
+            time = "\(hh+12)"+"\(time)"
+            
+//if the original is in AM and hour is 12am
+//then drop that hour
+//now make the time equal to 00 + time
+        } else if s.hasSuffix("AM"), hh == 12 {
+            time = String(time.dropFirst(2))
+            time = "00"+"\(time)"
+        }
+
+        return time
+    
+
+}

@@ -1,0 +1,15 @@
+func aVeryBigSum(ar: [Int]) -> Int {
+    // Write your code here
+    
+    //initialize variable
+    var sum: Int = 0
+    
+    //iterate through array of ints adding each other to sum
+    for each in ar {
+        sum += each
+    }
+    
+    //return sum
+    return sum
+
+}

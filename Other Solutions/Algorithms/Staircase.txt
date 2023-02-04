@@ -1,0 +1,17 @@
+func staircase(n: Int) -> Void {
+    // Write your code here
+    
+    //Here, we initialize a string variable. we will use this to create the string we need
+    var stairs = String()
+    
+    // iterate over range of 1 and n. In this case, going from 6 to 1
+    //1st part: print 5 repeating empty spaces (6-1)
+    //2nd part: print #s (6+1-6) so only printing 1
+    //3rd part: start on a new line
+    for step in (1...n).reversed() {
+        stairs += String(repeating: " ", count: step - 1) + String(repeating: "#", count: n + 1 - step) + "\n"
+    }
+    
+    print(stairs)
+
+}

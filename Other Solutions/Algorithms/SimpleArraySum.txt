@@ -1,0 +1,14 @@
+func simpleArraySum(ar: [Int]) -> Int {
+    // Write your code here
+   
+   //initialize a sum to return
+    var sum = 0;
+    
+    //for in loop to cycle and add each thing in array
+    for thing in ar {
+        sum += thing
+    }
+    
+    //return answer
+    return sum
+}

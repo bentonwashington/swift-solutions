@@ -1,0 +1,30 @@
+func plusMinus(arr: [Int]) -> Void {
+    // Write your code here
+    
+    //initialize variables. convert count to decimal
+    var count: Decimal = Decimal(arr.count)
+    var positive: Decimal = 0
+    var negative: Decimal = 0
+    var zero: Decimal = 0
+
+    //count how many are positives, negatives and zeros
+    for each in arr {
+        if each > 0 {
+            positive += 1
+        } else if each < 0 {
+            negative += 1
+        } else {
+            zero += 1
+        }
+    }
+    
+    //find the percentage
+    var posResult = positive / count
+    var negResult = negative / count
+    var zeResult = zero / count
+    
+    //print results
+    print(posResult)
+    print(negResult)
+    print(zeResult)
+}

@@ -1,0 +1,18 @@
+func diagonalDifference(arr: [[Int]]) -> Int {
+    // Write your code here
+    
+    //initialize variables
+    var n =  arr.count
+    var primaryDiagonalSum = 0
+    var secondaryDiagonalSum = 0
+    
+    //iterate through array of arrays
+    for index in 0..<n {
+    primaryDiagonalSum   +=  arr[index][index]
+    secondaryDiagonalSum +=  arr[index][n-index-1]
+    } 
+    
+    //return the absolute value of the sum
+    let difference = abs(primaryDiagonalSum - secondaryDiagonalSum)
+    return difference
+}

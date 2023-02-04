@@ -1,0 +1,17 @@
+func birthdayCakeCandles(candles: [Int]) -> Int {
+    // Write your code here
+    
+    //First, we have to figure out the tallest height out of the array
+    var max = candles.max()
+    var count = 0
+    
+    //Second, we have to count how many of them there are
+    for each in candles {
+        if each == max {
+            count += 1
+        }
+    }
+    //Third, give answer
+    return count
+
+}

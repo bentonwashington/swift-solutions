@@ -1,0 +1,22 @@
+func angryProfessor(k: Int, a: [Int]) -> String {
+    // Write your code here
+    
+    //initialize variable
+    var onTime = 0
+
+    //cycle through array to see how many students you have onTime
+    for each in a {
+        if each <= 0 {
+            onTime += 1
+        }
+    }
+    
+    //if that number is at or above the threshold, then class will NOT be cancelled
+    //if it is below, class WILL BE CANCELLED
+    if onTime >= k {
+        return "NO"
+    } else {
+        return "YES"
+    }
+
+}
