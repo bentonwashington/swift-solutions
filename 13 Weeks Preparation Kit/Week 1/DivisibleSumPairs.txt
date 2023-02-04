@@ -1,0 +1,33 @@
+func divisibleSumPairs(n: Int, k: Int, ar: [Int]) -> Int {
+    // Write your code here
+    
+    //initialize a variable who can keep track of valid pairs
+    var kCount = 0
+    
+    //initialize variables to loop through array
+    //we want to start from i and then go inside to the next number j
+    //here we are saying we only we want to go from the first number to the second to last number
+        //because the second to last number will get the last number once inside next loop
+        //for this start = 0; finish = 4
+    let start = 0
+    let finish = ar.count - 2
+
+    //here we are saying once we have i, we want the start of the next loop to automatically start at the next number
+        //for this start = i+1; finish = 5
+    let finishForJ = ar.count - 1
+    
+    
+    //first loop
+    for i in start...finish {
+        //once inside first loop... second loop
+        for j in (i+1)...finishForJ {
+            //checking for valid pairs
+            if (ar[i] + ar[j]) % k == 0 {                
+                kCount += 1
+    }
+  }
+}
+
+    //boom
+    return kCount
+}

@@ -1,0 +1,16 @@
+func viralAdvertising(n: Int) -> Int {
+    // Write your code here
+    
+    //initalize variables
+    var cumulative = 0
+    var shared = 5
+
+    //loop however many times
+    for each in 1...n {
+        let liked = shared / 2
+        cumulative += liked
+        shared = liked * 3
+}
+
+    return cumulative
+}

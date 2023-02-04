@@ -1,0 +1,31 @@
+func timeConversion(s: String) -> String {
+    // Write your code here
+    
+    //Ok first, lets initialize a variable for the hour
+    //if 07:45:00PM then hh is 07
+    var hh = Int(s.prefix(2))!
+    
+    //Now we need to drop the last two because militaryTime will not have merideum
+    //07:45:00
+    var milTime = String(s.dropLast(2))
+    
+    //now for loops to tell us what to do with the string given if PM
+    if s.hasSuffix("PM") && hh < 12 {
+        milTime = String(milTime.dropFirst(2))
+        milTime = "\(hh + 12)" + "\(milTime)"
+    }
+    
+    //if AM
+    else if s.hasSuffix("AM") && hh == 12 {
+        milTime = String(milTime.dropFirst(2))
+        milTime = "00" + "\(milTime)"
+    }
+    
+    else {(print("ERROR!"))}
+    
+    return milTime
+
+}
+    
+
+}

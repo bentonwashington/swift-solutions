@@ -1,0 +1,15 @@
+func miniMaxSum(arr: [Int]) -> Void {
+    // Write your code here
+    
+    //initialize variables for the sum, min value, and max value
+    let minValue = arr.min()
+    let maxValue = arr.max()
+    let sum = arr.reduce(0, +)
+    
+    //initialize variables for the minimum and maximum sums 
+    let minSum = sum - maxValue!
+    let maxSum = sum - minValue!
+    
+    //print the results and we done!!
+    print("\(minSum) \(maxSum)")
+}

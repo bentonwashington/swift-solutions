@@ -1,0 +1,27 @@
+func lonelyinteger(a: [Int]) -> Int {
+    // Write your code here
+
+    //need variables for the count and the lonelyInt
+    var lonelyInt = 0
+    
+    //take each element, reset count to zero
+    for each in a {
+        var count = 0
+        
+        //see how many times that element shows in the same array
+        for each2 in a {
+            if each == each2 {
+                count += 1
+            }
+        }
+        
+        //after counting, if the count = 1, then that's the lonelyInt
+        if count == 1 {
+            lonelyInt = each
+        }        
+    }
+    
+    //JESUS CHRIST
+    return lonelyInt
+    
+}

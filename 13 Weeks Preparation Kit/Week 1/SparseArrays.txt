@@ -1,0 +1,28 @@
+func matchingStrings(strings: [String], queries: [String]) -> [Int] {
+    // Write your code here
+    
+    //initialize variables. need an array to return, how many times to loop through given array and keep track of total
+    var result = [Int]()
+    let queryCount = queries.count - 1
+    let stringCount = strings.count - 1
+    var total = 0
+    
+    //loop through each in query count
+    for i in 0...queryCount {
+        total = 0
+        
+        //once youre in one of the queries, loop through each string
+        //if it matches the query, add 1 to the total
+        //then after looping add the total then add it to the result array
+        for j in 0...stringCount {
+            if queries[i] == strings[j] {
+                total += 1           
+            }       
+        }
+        result.append(total)
+    }
+    
+    //thank you JESUS!!!!
+    return result
+
+}
