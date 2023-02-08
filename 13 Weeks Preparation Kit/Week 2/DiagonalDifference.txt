@@ -1,0 +1,27 @@
+func diagonalDifference(arr: [[Int]]) -> Int {
+    // Write your code here
+    
+    //need variables to keep track of the count and sum of the two diagonals
+    let count = arr.count - 1
+    var diagonal1 = 0
+    var diagonal2 = 0
+    var j2 = count
+    
+    //need a loop to get the sum of first diagonal
+    for i in 0...count {
+        let j = i
+        diagonal1 += arr[i][j]
+        }
+        
+    //need a loop to get the sum of second diagonal
+    for i in 0...count {
+        diagonal2 += arr[i][j2]
+        j2 -= 1
+    }
+    
+    //variable for absolute difference
+    let output = abs(diagonal2 - diagonal1)
+    
+    //JESUS!!
+    return output   
+}

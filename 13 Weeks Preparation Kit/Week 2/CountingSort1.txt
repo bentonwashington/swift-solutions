@@ -1,0 +1,16 @@
+func countingSort(arr: [Int]) -> [Int] {
+    // Write your code here
+    
+    //create an array of 100 0's
+    var freqArr = [Int](repeating: 0, count: 100)
+    
+    //for each number in given array, it will add one to their spot
+    //for example, for 1 in given array, each time it appears, freqArr[1] (where the 1 spot is) will go up by 1
+    for each in arr {
+        freqArr[each] += 1
+    }
+    
+    //return the output. Thank You Jesus!
+    return freqArr
+
+}

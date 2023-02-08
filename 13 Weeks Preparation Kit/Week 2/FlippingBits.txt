@@ -1,0 +1,17 @@
+func flippingBits(n: Int) -> Int {
+    // Write your code here
+    
+    //Really was not sure what I was doing on this one but figured it out with a little research
+    //my understanding is that we are trying to flip the bits
+    
+    //here I convert the given int to a 32bit value type
+    let initialBits = UInt32(n)
+    
+    //here I flip the bits
+    let invertedBits = ~initialBits
+    
+    //since I have to return an Int, I convert the invertedBits back to an Int
+    return Int(invertedBits)
+}
+
+Thank you Jesus!!
