@@ -1,0 +1,23 @@
+func pangrams(s: String) -> String {
+    // Write your code here
+    
+    //these are the variables I'm going to use to solve the problem
+    //if the string contains all 26 characters from the alphabet string then it will be a pangram
+    let alphabet = "abcdefghijklmnopqrstuvwxyz"
+    let sLowerCased = s.lowercased()
+    var letterCount = 0
+    
+    //for each letter in alphabet if it is contained in the string, letterCount goes up by 11
+    for aLetter in alphabet {
+        if sLowerCased.contains(aLetter) {
+            letterCount += 1
+        }
+    }
+    
+    // if all letters present, pangram
+    if letterCount == 26 {
+        return "pangram"
+    } else {
+        return "not pangram"
+    }
+}

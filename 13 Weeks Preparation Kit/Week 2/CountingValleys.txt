@@ -1,0 +1,31 @@
+func countingValleys(steps: Int, path: String) -> Int {
+    // Write your code here
+    
+    //initialize variables. What we need to keep track of: how many valleys, do they reach ground and uphill steps
+    var valleyCount = 0
+    var uphillSteps = 0
+    var reachGround = true
+    
+    //this for loops keeps track of the uphill steps which allows me to keep track of where hiker is
+    for eachStep in path {
+        if eachStep == "U" {
+            uphillSteps += 1
+        } else {
+            uphillSteps -= 1
+        }
+        
+        //if the hiker goes down from being at ground level, then the valley count increases and reachGround goes to false so algorithm doesn't keep counting valleys
+        //once uphill steps are back at 0, now we can start counting another hill or valley
+        if uphillSteps < 0 && reachGround {
+            valleyCount += 1
+            reachGround = false
+        }
+        
+        if uphillSteps == 0 {
+            reachGround = true
+        }
+    }
+    
+    //of course, thank you JESUS!
+    return valleyCount
+}
